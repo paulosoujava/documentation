@@ -1,0 +1,384 @@
+<!-- HTML for static distribution bundle build -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Nextar</title>
+    <link rel="stylesheet" type="text/css" href="./swagger-ui.css" >
+    <link rel="icon" type="image/png" href="https://assets.website-files.com/56c3b3ae1457615e44cce8f8/56c9c55d0f1965960d69fc5c_NEXTAR-favicon32.png" sizes="32x32" />
+    
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+<style>
+body {
+  background:#eee;
+}
+  
+  
+</style>
+  <body>
+    <div class="container">
+    <div class="row center">
+      <div class="col s12">
+        
+        <div class="card-panel black lighten-2 white-text">
+          <img  src="https://assets.website-files.com/56c3b3ae1457615e44cce8f8/56c3b4111457615e44cce91e_NEXTAR-logo.png" alt="Nextar">
+          <h2>Documentação Interna de codificação</h2>
+          <p>Para um melhor desenvolvimento e padronização de nossos códigos estamos adotando algumas ferramentas</p>
+        </div>
+        <div class="row">
+          <div class="card-panel orange lighten-2 left white-text">
+            <i class="material-icons">code</i>
+            Para alterações, sugestões consulte o CTI
+          </div>
+        </div>
+        <br />
+        <hr />
+      </div>
+      <div class="col s6">
+        <img src="paste.png" />
+      </div>
+      <div class="col s6 left">
+        <br /><br />
+        <h2>Descrição</h2>
+        <ul class="collapsible left-align">
+          <li>
+            <div class="collapsible-header">__test__</div>
+            <div class="collapsible-body"><span> Onde ficaram todos os testes seja do ProductAPI ou ProducSync<br />
+              Pra rodar: <br />
+              Na pasta:: seu_usuario//nextar/catalogo-backend<br />
+                npm test<br />
+                ou<br />
+                npm run test:cv</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">bash</div>
+            <div class="collapsible-body"><span> Configurações de deploy referente ao aws</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">docs</div>
+            <div class="collapsible-body"><span> Arquivos para importação no Postman</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">oapi</div>
+            <div class="collapsible-body"><span>  Documentação do projeto com  open API</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">projects</div>
+            <div class="collapsible-body"><span> Onde a mágica acontence, nosso back-end esta aqui nesta pasta</span></div>
+          </li>
+          <li>
+            <div class="collapsible-header">raiz</div>
+            <div class="collapsible-body"><span><p>
+              Na raiz do projeto temos arquivos de configuração para os testes o husky e o standard, lembrando que <b>para dar um commit</b> 
+              você deve estar na raiz pois se você der um commit da pasta projects/ProductAPI/lambda/src o husky não vai garantir o seu commit<br />
+              <ul>
+              <li><b>.eslintrc.json  -> </b>configurações para rodar o ecmaScript e o es6</li>
+              <li><b>.eslintignore -> </b>para não rodar nas pastas aqui adicionadas</li>
+              <li><b>.husky.json -> </b>um hook que ira rodar no staged de seus arquivos para commit</li>
+              <li><b>.lintstagedrc.json -> </b>rodar somente nas pastas adicionadas aqui</li>
+              <li><b>jest.config.js -> </b>configuração do jest para os tests</li>
+              <li>
+                <p> !! Importante !! Em settings.json [cmd + shif + p ] adicione esta configuração para que o jest seja reconhecido pelo standard
+                   <pre>
+                   "standard.options": {
+                   "env": [
+                       "jest"
+                       ],
+                       "es6": true
+                   }
+                   </pre>
+                  </p>
+           </li>
+        </ul>
+        
+      </p>
+      </span>
+      </li>
+      </ul>
+      </div>
+
+      <div class="row center">
+            <div class="col s12" style="margin-left: 85px;">
+              <div class="card black darken-1 hover">
+                <div class="card-content white-text">
+                  <span class="card-title"><h2>Assista o vídeo </h2></span>
+                    <iframe width="100%" height="415" src="https://www.youtube.com/embed/3hy1qtPehOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+      </div>
+        
+      <div class="row">
+        <p>Para que o código tenha um padrão estamos adotando alguns frameworks <small>recomendamos fortemente o uso do visual studio</small></p>
+
+        <ul class="left-align">
+          <li>
+              
+              <div class="row">
+                <div class="card-panel black lighten-2 left white-text">
+                  <i class="material-icons">code</i>
+                  <h3>Commits</h3>
+                </div>
+              </div>
+              
+                    Os commits passaram a adotar este padrão: <br />
+                    Conventional Commits<br/>
+                    <small>A specification for adding human and machine readable meaning to commit messages.</small><br />
+                    Ao fazer um git  commit a mensagem será padronizada em:<br />
+      
+                        <b>feat:</b>     a new feature<br />
+                        <b>fix:</b>      a bug fix<br />
+                        <b>docs:</b>     documentation only changes<br />
+                        <b>style:</b>    changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)<br />
+                        <b>refactor:</b> a code change that neither fixes a bug nor adds a feature<br />
+                        <b>test:</b>     adding missing tests or correcting existing ones<br />
+                        <b>chore:</b>    changes to the build process or auxiliary tools and libraries such as documentation generation<br />
+                        <b> perf:</b>     a code change that improves performance<br />
+                        <b>ci:</b>       changes to your CI configuration files and scripts<br />
+                        <b>temp:</b>     temporary commit that won't be included in your CHANGELOG<br />
+      
+                        <h3>Git-commit-msg-linter em ação: </h3>
+                        
+                          <img src="commit.png"  style="width: 80%;"/>
+                        
+                        <br /><br />
+                        <b> !! IMPORTANTE !!</b>
+                        <p>Os commits tem que ser fetio na raiz do projeto /nextar/catalogo-beckend pois os tests passaram para a raíz</p>
+                        <img src="raiz.png"  style="width: 50%;"/>
+                      
+          </li>
+          <li>    
+            <br />
+            <hr />
+            <br />        
+              <div class="row">
+                <div class="card-panel black lighten-2 left white-text">
+                  <i class="material-icons">code</i>
+                  <h3>Codificação</h3>
+                </div>
+              </div>
+                Os códigos passaram a adotar este padrão: <br />
+                JavaScript Standard Style<br />
+                </small>JavaScript style guide, linter, and formatter</small>
+                No visual studio você pode habilitar o plugin:<br />
+                StandardJS - JavaScript Standard Style<br />
+                Author:Sam Chen<br />
+                Que ele o visual studio cuida disto para você, se quiser saber mais sobre o padrão
+                de códificação, por favor de uma olhada no site
+                <a class="btn" href="https://standardjs.com/rules.html" target="_blank">clicando aqui</a>
+                <br />
+                <div class="row">
+                  <div class="col s6">
+                    <h6>Dependencias de desenvolvimento: </h6>
+                    <img src="codificacao.png"  style="width: 50%;"/>
+                  </div>
+                  <div class="col s6">
+                    <h6>Setup no projeto: </h6>
+                    <img src="setup.png"  style="width: 50%;"/>
+                  </div>
+                </div>
+                
+                
+          </li>    
+          
+          <li>
+            <br />
+            <hr />
+            <br />  
+              <div class="row">
+                <div class="card-panel black lighten-2 left white-text">
+                  <i class="material-icons">code</i>
+                  <h3>Husky</h3>
+                </div>
+              </div>
+              Git hooks made easy
+              <small>Husky can prevent bad git commit, git push and more 🐶 woof!</small><br />
+              O Husky é um hook, que roda alguns pré comandos configurados por default ou por você mesmo,
+              ou seja, quando você for dar um commit [git commit -m 'Keep calm and commit'] o husky será chamado, para isso basta apenas setarmos
+              no nosso package.json  <br />
+              <pre>
+                {
+                  "husky": {
+                      "hooks": {
+                          "pre-commit": "npm test",
+                          "pre-push": "npm test",
+                      }
+                    }
+                }
+              </pre> 
+              <br />
+              <h3>Husky em ação: </h3>
+                <img src="husky.png"  style="width: 80%;"/>
+
+              <br /><br />
+          </li>
+          <li>      
+            <br />
+            <hr />
+            <br />      
+            <div class="row">
+              <div class="card-panel black lighten-2 left white-text">
+                <i class="material-icons">code</i>
+                <h3>Jest - Supertest - Coverage </h3>
+              </div>
+            </div>
+              
+              Jest is a delightful JavaScript Testing Framework with a focus on simplicity<br />
+              <small>para test chame o jest, rss baita trocadilho</small><br />
+              Sim senhores teremos que fazer o teste do que estamos implementando, se
+              você esta criando um novo end-point você deve antes mesmo de criar o end-point 
+              cria o seu test isso se chama TDD Test Driven Development ou em português 
+              Desenvolvimento Orientado por Testes crie seu test e se oriente por ele com o jest 
+              adicionaremos também o coverage que é o indece de cobretura de testes trealizado em 
+              nosso projeto. O supertest vai nos permitir testar os end-points.<br />
+              <b>Jest</b> - Is a JavaScript testing framework developed by Facebook. It works out of the box with minimal configuration and has in-built test runner, assertion library and mocking support.<br />
+              <b>Supertest</b> - A library for testing Node.js HTTP servers. It enables us to programmatically send HTTP requests such as GET, POST, PATCH, PUT, DELETE to HTTP servers and get results.<br />
+              Para mais detalhes do jest e o coverage  <a class="btn" href="https://jestjs.io/" target="_blank">clique aqui</a>
+              <br />
+              <h3>Jest and Coverage em ação: </h3>
+                <img src="jest.png"  style="width: 80%;"/>
+
+              <br /><br />
+           </li>
+           <li>   
+            <br />
+            <hr />
+            <br />
+              <div class="row">
+                <div class="card-panel black lighten-2 left white-text">
+                  <i class="material-icons">code</i>
+                  <h3>OpenAPI Specification </h3>
+                </div>
+              </div>
+                E finalmente o OpenAPI que é onde você esta lendo isso e vendo os end-points do projeto</
+                <small>he World Standard for RESTful APIs   The OpenAPI Specification was donated to the Linux Foundation under the OpenAPI Initiative in 2015. The specification creates a RESTful interface for easily developing and consuming an API by effectively mapping all the resources and operations associated with it.</small><br />
+                <br>
+                <br />
+          </li>
+          <li>      
+            <div class="row">
+              <div class="card-panel black lighten-2 left white-text">
+                <i class="material-icons">code</i>
+                <h3>Fontes:</h3>
+              </div>
+            </div>
+                    
+                    <a class="btn" href="https://swagger.io/resources/open-api/" target="_blank">OpenAPI</a> 
+                    <a class="btn" href="https://jestjs.io/" target="_blank">Jest & Coverage</a> 
+                    <a class="btn" href="https://www.npmjs.com/package/supertest" target="_blank">SuperTest</a> 
+                    <a class="btn" href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank">JavaScript Standard Style</a> 
+                    <a  class="btn" href="https://www.conventionalcommits.org/en/v1.0.0/" target="_blank"> Conventional Commits</a>  
+                    <br>
+                    <br />
+              
+      
+                    <br />
+                    <hr />
+                    <br />
+                    <div class="row">
+                      <div class="card-panel black lighten-2 left white-text">
+                        <i class="material-icons">code</i>
+                        <h1>Resumindo</h1>
+                      </div>
+                    </div>
+                        
+                        <br />
+                        Depois de tudo instalado e configurado ao realizar o commit ira rodar o Husky que <br />
+                        executará um pré comando para rodar o standar, que irá ajeitar o código após isso rodará<br />
+                        o jest que irá realizar os seus tests e se seu commit estiver no padrão das mensagens passara e<br />
+                        viveremos felizes para sempre...
+      
+                        <br /><br />
+                        Para melhor ajudarmos criamos este  video explicativo
+                        basta <a class="btn" href="https://drive.google.com/file/d/1LMbLJpUeltgYQOFyNP_YL5RUO38OJ2Tp/view?usp=sharing">clicar aqui para ver o vídeo.</a> 
+      
+                        <br /><br />
+                        Exemplo de um git message mal feito:<br />
+                        Após instalar as dependencias de desenvolvimento e tentar fazer um git commit<br />
+                        se seu código estiver no padrão o commit será realizado mas caso tenha erros,<br />
+                        variaveis declaradas e não utlizadas, um erro será exibido e o commit não será realizado<br />
+                        <br />
+                        Erro ao tentar fazer um commit assim:<br />
+                        git commit -m "test"<br /><br />
+      
+                        test:test:************* Invalid Git Commit Message **************<br />
+                        commit message: add a new feat<br />
+                        correct format: <type>(<scope>): <subject><br />
+                        example:        docs: update README<br />
+                        <br />
+                        type:<br />
+                        feat     a new feature<br />
+                        fix      a bug fix<br />
+                        docs     documentation only changes<br />
+                        style    changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)<br />
+                        refactor a code change that neither fixes a bug nor adds a feature<br />
+                        test     adding missing tests or correcting existing ones<br />
+                        chore    changes to the build process or auxiliary tools and libraries such as documentation generation<br />
+                        perf     a code change that improves performance<br />
+                        ci       changes to your CI configuration files and scripts<br />
+                        temp     temporary commit that won't be included in your CHANGELOG<br />
+                        <br />
+                        scope:<br />
+                        Optional, can be anything specifying the place of the commit change.<br />
+                        For example $location, $browser, $compile, $rootScope, ngHref, ngClick, ngView, etc.<br />
+                        In App Development, scope can be a page, a module or a component.<br />
+                        <br />
+                        subject:<br />
+                        A very short description of the change in one line.<br />
+      
+                </p>
+                </li>
+            </ul>
+            
+        </div>
+      </div>
+      <br />
+      <hr />
+      <br />
+      <div class="col s6">
+        <div class="row">
+          <div class="card-panel black lighten-2 left white-text">
+            <i class="material-icons">code</i>
+            <h3>Response Codes</h3><br />
+          </div>
+        </div>
+        <center>
+          <a href="https://http.cat/"  target="_blank" class="btn">HTTP Fun Response Cats Commits</a>  
+          <a href="https://httpstatusdogs.com/"  target="_blank" class="btn " >HTTP Fun Responses Dogs Commits</a>  
+          <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status"  target="_blank" class="btn " >HTTP Default Resonses </a>  <br />
+        </center>
+      
+      </div>
+      <div class="col s6">
+        <div class="col s6">
+          <div class="row">
+            <div class="card-panel black lighten-2 left white-text">
+        <center>
+          <h3> Lista de Código de Status HTTP</h3>
+          <p>Agora que você sabe o que é HTTP e HTTPS, confira essa lista com códigos HTTP, que tem os códigos mais comuns e outros que raramente são usados, baseado no W3.org.</p>
+        </center>
+       
+              </div>
+              </div>
+        <table class="responsive-table highlight striped"><tbody><tr><td style="text-align: center;"><b>Código do Status HTTP<br> </b><b style="font-size: 12px;">(Status-code)</b></td><td style="text-align: center;"><b>Significado do código </b><b>HTTP<br> </b><b style="font-size: 12px;">(Reason-Phrase)</b></td><td style="text-align: center;"><b>Significado do código </b><b>HTTP </b></td></tr><tr><td><span style="font-weight: 400;">100</span></td><td><span style="font-weight: 400;">Continue</span></td><td><span style="font-weight: 400;">Continuar</span></td></tr><tr><td><span style="font-weight: 400;">101</span></td><td><span style="font-weight: 400;">Switching Protocols</span></td><td><span style="font-weight: 400;">Mudando Protocolos</span></td></tr><tr><td><span style="font-weight: 400;">102</span></td><td><span style="font-weight: 400;">Processing</span></td><td><span style="font-weight: 400;">Processando</span></td></tr><tr><td><span style="font-weight: 400;">200</span></td><td><span style="font-weight: 400;">Ok</span></td><td><span style="font-weight: 400;">Ok</span></td></tr><tr><td><span style="font-weight: 400;">201</span></td><td><span style="font-weight: 400;">Created</span></td><td><span style="font-weight: 400;">Criado</span></td></tr><tr><td><span style="font-weight: 400;">202</span></td><td><span style="font-weight: 400;">Accepted</span></td><td><span style="font-weight: 400;">Aceito</span></td></tr><tr><td><span style="font-weight: 400;">203</span></td><td><span style="font-weight: 400;">Non-Authoritative Information</span></td><td><span style="font-weight: 400;">Não autorizado</span></td></tr><tr><td><span style="font-weight: 400;">204</span></td><td><span style="font-weight: 400;">No Content</span></td><td><span style="font-weight: 400;">Nenhum Conteúdo</span></td></tr><tr><td><span style="font-weight: 400;">205</span></td><td><span style="font-weight: 400;">Reset Content</span></td><td><span style="font-weight: 400;">Resetar Conteúdo</span></td></tr><tr><td><span style="font-weight: 400;">206</span></td><td><span style="font-weight: 400;">Partial Content</span></td><td><span style="font-weight: 400;">Conteúdo Parcial</span></td></tr><tr><td><span style="font-weight: 400;">300</span></td><td><span style="font-weight: 400;">Multiple Choices</span></td><td><span style="font-weight: 400;">Múltipla Escolha</span></td></tr><tr><td><span style="font-weight: 400;">301</span></td><td><span style="font-weight: 400;">Moved Permanently</span></td><td><span style="font-weight: 400;">Movido Permanentemente</span></td></tr><tr><td><span style="font-weight: 400;">302</span></td><td><span style="font-weight: 400;">Found</span></td><td><span style="font-weight: 400;">Encontrado</span></td></tr><tr><td><span style="font-weight: 400;">303</span></td><td><span style="font-weight: 400;">See Other</span></td><td><span style="font-weight: 400;">Veja outro</span></td></tr><tr><td><span style="font-weight: 400;">304</span></td><td><span style="font-weight: 400;">Not Modified</span></td><td><span style="font-weight: 400;">Não modificado</span></td></tr><tr><td><span style="font-weight: 400;">305</span></td><td><span style="font-weight: 400;">Use Proxy</span></td><td><span style="font-weight: 400;">Use Proxy</span></td></tr><tr><td><span style="font-weight: 400;">306</span></td><td><span style="font-weight: 400;">Proxy Switch</span></td><td><span style="font-weight: 400;">Proxy Trocado</span></td></tr><tr><td><span style="font-weight: 400;">400</span></td><td><span style="font-weight: 400;">Bad Request</span></td><td><span style="font-weight: 400;">Solicitação Inválida</span></td></tr><tr><td><span style="font-weight: 400;">401</span></td><td><span style="font-weight: 400;">Unauthorized</span></td><td><span style="font-weight: 400;">Não autorizado</span></td></tr><tr><td><span style="font-weight: 400;">402</span></td><td><span style="font-weight: 400;">Payment Required</span></td><td><span style="font-weight: 400;">Pagamento necessário</span></td></tr><tr><td><span style="font-weight: 400;">403</span></td><td><span style="font-weight: 400;">Forbidden </span></td><td><span style="font-weight: 400;">Proibido</span></td></tr><tr><td><span style="font-weight: 400;">404</span></td><td><span style="font-weight: 400;">Not Found</span></td><td><span style="font-weight: 400;">Não encontrado</span></td></tr><tr><td><span style="font-weight: 400;">405</span></td><td><span style="font-weight: 400;">Method Not Allowed</span></td><td><span style="font-weight: 400;">Método não permitido</span></td></tr><tr><td><span style="font-weight: 400;">406</span></td><td><span style="font-weight: 400;">Not Acceptable</span></td><td><span style="font-weight: 400;">Não aceito</span></td></tr><tr><td><span style="font-weight: 400;">407</span></td><td><span style="font-weight: 400;">Proxy Authentication Required</span></td><td><span style="font-weight: 400;">Autenticação de Proxy Necessária</span></td></tr><tr><td><span style="font-weight: 400;">408</span></td><td><span style="font-weight: 400;">Request Time-out</span></td><td><span style="font-weight: 400;">Tempo de solicitação esgotado</span></td></tr><tr><td><span style="font-weight: 400;">409</span></td><td><span style="font-weight: 400;">Conflict</span></td><td><span style="font-weight: 400;">Conflito</span></td></tr><tr><td><span style="font-weight: 400;">410</span></td><td><span style="font-weight: 400;">Gone</span></td><td><span style="font-weight: 400;">Perdido</span></td></tr><tr><td><span style="font-weight: 400;">411</span></td><td><span style="font-weight: 400;">Length Required</span></td><td><span style="font-weight: 400;">Duração necessária</span></td></tr><tr><td><span style="font-weight: 400;">412</span></td><td><span style="font-weight: 400;">Precondition Failed</span></td><td><span style="font-weight: 400;">Falha de pré-condição</span></td></tr><tr><td><span style="font-weight: 400;">413</span></td><td><span style="font-weight: 400;">Request Entity Too Large</span></td><td><span style="font-weight: 400;">Solicitação da entidade muito extensa</span></td></tr><tr><td><span style="font-weight: 400;">414</span></td><td><span style="font-weight: 400;">Request-URL Too Large</span></td><td><span style="font-weight: 400;">Solicitação de URL muito Longa</span></td></tr><tr><td><span style="font-weight: 400;">415</span></td><td><span style="font-weight: 400;">Unsupported Media Type</span></td><td><span style="font-weight: 400;">Tipo de mídia não suportado</span></td></tr><tr><td><span style="font-weight: 400;">416</span></td><td><span style="font-weight: 400;">Request Range Not Satisfiable</span></td><td><span style="font-weight: 400;">Solicitação de faixa não satisfatória</span></td></tr><tr><td><span style="font-weight: 400;">417</span></td><td><span style="font-weight: 400;">Expectation Failed</span></td><td><span style="font-weight: 400;">Falha na expectativa</span></td></tr><tr><td><span style="font-weight: 400;">500</span></td><td><span style="font-weight: 400;">Internal Server Error</span></td><td><span style="font-weight: 400;">Erro do Servidor Interno</span></td></tr><tr><td><span style="font-weight: 400;">501</span></td><td><span style="font-weight: 400;">Not Implemented</span></td><td><span style="font-weight: 400;">Não implementado</span></td></tr><tr><td><span style="font-weight: 400;">502</span></td><td><span style="font-weight: 400;">Bad Gateway </span></td><td><span style="font-weight: 400;">Porta de entrada ruim</span></td></tr><tr><td><span style="font-weight: 400;">503</span></td><td><span style="font-weight: 400;">Service Unavailable </span></td><td><span style="font-weight: 400;">Serviço Indisponível</span></td></tr><tr><td><span style="font-weight: 400;">504</span></td><td><span style="font-weight: 400;">Gateway Time-out</span></td><td><span style="font-weight: 400;">Tempo limite da Porta de Entrada</span></td></tr><tr><td><span style="font-weight: 400;">505</span></td><td><span style="font-weight: 400;">HTTP Version Not Supported </span></td><td><span style="font-weight: 400;">Versão HTTP não suportada</span></td></tr></tbody></table>
+      </div>
+    </div>
+    <br />
+    <br />
+    <br /><br /><br />
+              <center>
+                <img  src="https://assets.website-files.com/56c3b3ae1457615e44cce8f8/56c3b4111457615e44cce91e_NEXTAR-logo.png" alt="Nextar">
+                </center>
+            
+  </div>
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://materializecss.com/bin/materialize.js"></script>
+  <script src="init.js"></script>
+  </body>
+</html>
